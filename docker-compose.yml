@@ -1,0 +1,17 @@
+services:
+  express-app:
+    image: argentinianlinuxnewbie2003/devops-uh-3.1:1.1
+    restart: unless-stopped
+    container_name: express-app
+    ports:
+      - 8080:8080
+  
+  watchtower:
+    image: containrrr/watchtower
+    environment:
+      -  WATCHTOWER_POLL_INTERVAL=15 # Poll every 60 seconds
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    container_name: watchtower
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
