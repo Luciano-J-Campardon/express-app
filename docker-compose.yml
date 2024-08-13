@@ -9,7 +9,7 @@ services:
   watchtower:
     image: containrrr/watchtower
     environment:
-      -  WATCHTOWER_POLL_INTERVAL=15 # Poll every 60 seconds
+      -  WATCHTOWER_POLL_INTERVAL=15 # Poll every 15 seconds
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     container_name: watchtower
