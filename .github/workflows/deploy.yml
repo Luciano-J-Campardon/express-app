@@ -45,4 +45,4 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: argentinianlinuxnewbie2003/DevOps-UH-3.1:1.0
+          tags: argentinianlinuxnewbie2003/devops-uh-3.1:1.0
